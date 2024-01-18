@@ -1,0 +1,128 @@
+# Copyright (C) 2024 unnamed project
+# This file is distributed under the same license as the unnamed project package.
+msgid ""
+msgstr ""
+"Project-Id-Version: unnamed project\n"
+"Project-Id-Version: undefined\n"
+"POT-Creation-Date: 2024-01-17 16:55+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: ../admin/settings.php:6
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Non hai permessi sufficienti per accedere a questa pagina."
+
+#: ../admin/settings.php:10
+msgid "LightMember"
+msgstr "LightMember"
+
+#: ../admin/settings.php:11
+msgid "Welcome to LightMeber plugin settings"
+msgstr "Benvenuto nelle impostazioni del plugin LightMember"
+
+#: ../admin/settings.php:19
+msgid "Stripe Endpoint Secret"
+msgstr "Chiave segreta dell'endpoint di Stripe"
+
+#: ../admin/settings.php:24
+msgid "Stripe Secret Key"
+msgstr "Chiave segreta di Stripe"
+
+#: ../admin/settings.php:30
+msgid "Stripe API Keys"
+msgstr "Chiavi API di Stripe"
+
+#: ../admin/settings.php:34
+msgid "Stripe Customer Portal URL"
+msgstr "URL del portale clienti di Stripe"
+
+#: ../admin/settings.php:40
+msgid "Enable Stripe Customer Portal"
+msgstr "Abilita il portale clienti di Stripe"
+
+#: ../admin/settings.php:44
+msgid "Enable Stripe Production mode?"
+msgstr "Abilitare la modalità di produzione di Stripe?"
+
+#: ../admin/settings.php:47, ../admin/settings.php:74, ../admin/settings.php:124, ../admin/settings.php:134,
+#: ../admin/settings.php:144, ../admin/settings.php:155, ../admin/settings.php:167, ../includes/options.php:655
+msgid "True"
+msgstr "Vero"
+
+#: ../admin/settings.php:48, ../admin/settings.php:75, ../admin/settings.php:125, ../admin/settings.php:135,
+#: ../admin/settings.php:145, ../admin/settings.php:156, ../admin/settings.php:168, ../includes/options.php:656
+msgid "False"
+msgstr "Falso"
+
+#: ../admin/settings.php:54
+msgid "Generated Username Prefix"
+msgstr "Prefisso del nome utente generato"
+
+#: ../admin/settings.php:61
+msgid "Free Member Role"
+msgstr "Ruolo di membro gratuito"
+
+#: ../admin/settings.php:62
+msgid "Default: Subscriber"
+msgstr "Predefinito: Abbonato"
+
+#: ../admin/settings.php:66
+msgid "Pay Member Role"
+msgstr "Ruolo di membro a pagamento"
+
+#: ../admin/settings.php:71
+msgid "Enable Log files for endpoint requests?"
+msgstr "Abilitare i file di registro per le richieste di endpoint?"
+
+#: ../admin/settings.php:81
+msgid "Email From"
+msgstr "Email da"
+
+#: ../admin/settings.php:86
+msgid "Email From name"
+msgstr "Nome email da"
+
+#: ../admin/settings.php:91
+msgid "Email Subject"
+msgstr "Oggetto dell'email"
+
+#: ../admin/settings.php:96
+msgid "Email message"
+msgstr "Messaggio dell'email"
+
+#: ../admin/settings.php:105
+msgid "Message to display for partially hidden content to non-members"
+msgstr "Messaggio da visualizzare per il contenuto parzialmente nascosto ai non membri"
+
+#: ../admin/settings.php:110
+msgid "Message to display for fullpage hidden content to non-members"
+msgstr "Messaggio da visualizzare per il contenuto completo nascosto ai non membri"
+
+#: ../includes/options.php:661
+msgid "Hide partial content with <b>[lm_members_only]</b>Hidden content<b>[/lm_members_only]</b>"
+msgstr "Nascondi il contenuto parziale con <b>[lm_members_only]</b>Contenuto nascosto<b>[/lm_members_only]</b>"
+
+#: ../includes/options.php:668
+msgid "Hide entire content to non-members"
+msgstr "Nascondi l'intero contenuto ai non membri"
+
+#: ../includes/options.php:730, ../includes/options.php:753
+msgid "Unlock the full content by becoming a member today!"
+msgstr "Sblocca il contenuto completo diventando membro oggi stesso!"
+
+#: ../includes/options.php:721
+msgid "Hidden content"
+msgstr "Contenuto nascosto"

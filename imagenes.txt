@@ -1,0 +1,10 @@
+Normal Banner: banner-772x250.(jpg|png)
+Normal Banner (Localized): banner-772x250-(rtl|es|es_ES).(jpg|png)
+High-DPI (Retina): banner-1544x500.(jpg|png)
+High-DPI (Retina Localized): banner-1544x500-(rtl|es|es_ES).(jpg|png)
+
+
+icon
+Normal: icon-128x128.(png|jpg)
+High-DPI (Retina): icon-256x256.(png|jpg)
+SVG: icon.svg

@@ -43,13 +43,10 @@ What you can do with this plugin:
 * Highlighted hidden content for administrators
 * Shortcodes/Filters/Hooks
 
-Supported languages:
+Included languages:
 
 * English
 * Spanish
-* French
-* Italian
-* Deutsch
 * .pot file included
 
 == Installation ==
@@ -75,6 +72,10 @@ Yes, completely free. You won't have to pay for any additional add-ons. If this 
 6. Administrator view of partial hidden content
 
 == Changelog ==
+
+= 1.3 =
+* Spanish language added
+* Bug fixes
 
 = 1.2 =
 * Added shortcode lm_login_button

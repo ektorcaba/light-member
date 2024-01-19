@@ -120,27 +120,35 @@ padding: 0.8em 1em 0.8em 1em;
 display: inline-block;
 background-color: #fffedb;
 display: block;
-margin-bottom: 14px;   
+margin-bottom: 14px;
+color:#222;   
 }
 
 .lm_hide_box_fullpage{
-border: none;
-border-radius: 6px;
 padding: 0.8em 1em 0.8em 1em;
 display: inline-block;
 background-color: #fffedb;
 display: block;
-margin-bottom: 14px;   
+margin-bottom: 14px;
+color:#222;   
+
+}
+
+.lm_hide_box a{
+  color:#222 !important;   
+}
+  
+.lm_hide_box_fullpage a{
+  color:#222 !important;   
 }
 
 
 
+
 .lm_admin_box{
-border: none;
-border-radius: 6px;
 padding: 0.8em 1em 0.8em 1em;
 display: inline-block;
-background-color: #ffdbdb;
+border: 3px dotted #930000;
 display: block;
 margin-bottom: 14px;   
 }

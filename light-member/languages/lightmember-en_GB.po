@@ -2,9 +2,8 @@
 # This file is distributed under the same license as the unnamed project package.
 msgid ""
 msgstr ""
-"Project-Id-Version: unnamed project\n"
 "Project-Id-Version: undefined\n"
-"POT-Creation-Date: 2024-01-17 16:55+0000\n"
+"POT-Creation-Date: 2024-01-19 14:23+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -14,117 +13,430 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: ../admin/settings.php:6
-msgid "You do not have sufficient permissions to access this page."
-msgstr "You do not have sufficient permissions to access this page."
+#: admin/settings.php:6
+msgid "No tienes suficientes permisos para acceder a esta página."
+msgstr ""
 
-#: ../admin/settings.php:10
+#: admin/settings.php:10
 msgid "LightMember"
 msgstr "LightMember"
 
-#: ../admin/settings.php:11
+#: admin/settings.php:11
 msgid "Welcome to LightMeber plugin settings"
 msgstr "Welcome to LightMeber plugin settings"
 
-#: ../admin/settings.php:19
+#: admin/settings.php:19
 msgid "Stripe Endpoint Secret"
 msgstr "Stripe Endpoint Secret"
 
-#: ../admin/settings.php:24
+#: admin/settings.php:24
 msgid "Stripe Secret Key"
 msgstr "Stripe Secret Key"
 
-#: ../admin/settings.php:30
+#: admin/settings.php:30
 msgid "Stripe API Keys"
 msgstr "Stripe API Keys"
 
-#: ../admin/settings.php:34
+#: admin/settings.php:34
 msgid "Stripe Customer Portal URL"
 msgstr "Stripe Customer Portal URL"
 
-#: ../admin/settings.php:40
+#: admin/settings.php:40
 msgid "Enable Stripe Customer Portal"
 msgstr "Enable Stripe Customer Portal"
 
-#: ../admin/settings.php:44
+#: admin/settings.php:44
 msgid "Enable Stripe Production mode?"
 msgstr "Enable Stripe Production mode?"
 
-#: ../admin/settings.php:47, ../admin/settings.php:74, ../admin/settings.php:124,
-#: ../admin/settings.php:134, ../admin/settings.php:144, ../admin/settings.php:155,
-#: ../admin/settings.php:167, ../includes/options.php:655
+#: admin/settings.php:47 admin/settings.php:74 admin/settings.php:124
+#: admin/settings.php:134 admin/settings.php:144 admin/settings.php:155
+#: admin/settings.php:167 includes/options.php:696 includes/options.php:704
 msgid "True"
 msgstr "True"
 
-#: ../admin/settings.php:48, ../admin/settings.php:75, ../admin/settings.php:125,
-#: ../admin/settings.php:135, ../admin/settings.php:145, ../admin/settings.php:156,
-#: ../admin/settings.php:168, ../includes/options.php:656
+#: admin/settings.php:48 admin/settings.php:75 admin/settings.php:125
+#: admin/settings.php:135 admin/settings.php:145 admin/settings.php:156
+#: admin/settings.php:168 includes/options.php:697 includes/options.php:705
 msgid "False"
 msgstr "False"
 
-#: ../admin/settings.php:54
+#: admin/settings.php:54
 msgid "Generated Username Prefix"
 msgstr "Generated Username Prefix"
 
-#: ../admin/settings.php:61
+#: admin/settings.php:61
 msgid "Free Member Role"
 msgstr "Free Member Role"
 
-#: ../admin/settings.php:62
+#: admin/settings.php:62
 msgid "Default: Subscriber"
 msgstr "Default: Subscriber"
 
-#: ../admin/settings.php:66
+#: admin/settings.php:66
 msgid "Pay Member Role"
 msgstr "Pay Member Role"
 
-#: ../admin/settings.php:71
+#: admin/settings.php:71
 msgid "Enable Log files for endpoint requests?"
 msgstr "Enable Log files for endpoint requests?"
 
-#: ../admin/settings.php:81
+#: admin/settings.php:81
 msgid "Email From"
 msgstr "Email From"
 
-#: ../admin/settings.php:86
+#: admin/settings.php:86
 msgid "Email From name"
 msgstr "Email From name"
 
-#: ../admin/settings.php:91
+#: admin/settings.php:91
 msgid "Email Subject"
 msgstr "Email Subject"
 
-#: ../admin/settings.php:96
+#: admin/settings.php:96
 msgid "Email message"
 msgstr "Email message"
 
-#: ../admin/settings.php:105
+#: admin/settings.php:105
 msgid "Message to display for partially hidden content to non-members"
 msgstr "Message to display for partially hidden content to non-members"
 
-#: ../admin/settings.php:110
+#: admin/settings.php:110
 msgid "Message to display for fullpage hidden content to non-members"
 msgstr "Message to display for fullpage hidden content to non-members"
 
-#: ../includes/options.php:661
-msgid "Hide partial content with <b>[lm_members_only]</b>Hidden content<b>[/lm_members_only]</b>"
-msgstr "Hide partial content with <b>[lm_members_only]</b>Hidden content<b>[/lm_members_only]</b>"
+#: admin/settings.php:116
+msgid "Member Page"
+msgstr ""
 
-#: ../includes/options.php:668
+#: admin/settings.php:117
+msgid ""
+"Page for Login/Register/Forgot/Profile, use this shortcode: "
+"[lm_member_profile_page]"
+msgstr ""
+
+#: admin/settings.php:121
+msgid "Hide admin bar for non-administrators?"
+msgstr ""
+
+#: admin/settings.php:131
+msgid "Redirect \"wp-admin/profile.php\" for non-administrators?"
+msgstr ""
+
+#: admin/settings.php:141
+msgid "Enable Register form for Free users?"
+msgstr ""
+
+#: admin/settings.php:152
+msgid "Disable \"wp-login.php\" for non-logout & non-administrators?"
+msgstr ""
+
+#: admin/settings.php:158
+msgid ""
+"WARNING! This deactivates the WordPress login form. You will need an "
+"alternative method to access your account with this option enabled"
+msgstr ""
+
+#: admin/settings.php:164
+msgid "Enable reCAPTCHA on login/register/forgot forms?"
+msgstr ""
+
+#: admin/settings.php:170
+msgid "You can obtain your reCAPTCHA keys from this link:"
+msgstr ""
+
+#: admin/settings.php:175
+msgid "reCAPTCHA Site Key"
+msgstr ""
+
+#: admin/settings.php:180
+msgid "reCAPTCHA Secret Key"
+msgstr ""
+
+#: admin/settings.php:186
+msgid "Subscription new/updated Email subject"
+msgstr ""
+
+#: admin/settings.php:192
+msgid "Subscription new/updated Email message"
+msgstr ""
+
+#: admin/settings.php:204
+msgid "Your Endpoint Webhook"
+msgstr ""
+
+#: admin/settings.php:205
+msgid "Add this endpoint url to your Stripe account to receive payment events."
+msgstr ""
+
+#: admin/settings.php:205
+msgid "Add endpoint"
+msgstr ""
+
+#: includes/options.php:100
+msgid ""
+"Thank you for your subscription to {{sitename}}!.\\n You can now enjoy all "
+"its benefits by accessing your account.\\n\\n {{siteurl}}"
+msgstr ""
+
+#: includes/options.php:101
+msgid "Your subscription has been updated!"
+msgstr ""
+
+#: includes/options.php:119
+msgid "Donate"
+msgstr ""
+
+#: includes/options.php:136
+msgid "Welcome to your member area."
+msgstr ""
+
+#: includes/options.php:136
+msgid "Welcome"
+msgstr ""
+
+#: includes/options.php:140
+msgid "You are part of the members' community. Your membership is valid until"
+msgstr ""
+
+#: includes/options.php:140
+msgid "Y-m-d"
+msgstr ""
+
+#: includes/options.php:142
+msgid "You are part of the members' community."
+msgstr ""
+
+#: includes/options.php:146
+msgid "You are currently not a member of the site"
+msgstr ""
+
+#: includes/options.php:152
+msgid "Subscriptions"
+msgstr ""
+
+#: includes/options.php:157 includes/options.php:873
+msgid "Log out"
+msgstr ""
+
+#: includes/options.php:181
+msgid "Invoices"
+msgstr ""
+
+#: includes/options.php:182
+msgid "No."
+msgstr ""
+
+#: includes/options.php:182
+msgid "Date"
+msgstr ""
+
+#: includes/options.php:187
+msgid "View invoice"
+msgstr ""
+
+#: includes/options.php:211
+msgid "Member data"
+msgstr ""
+
+#: includes/options.php:216
+msgid "Stripe Customer ID"
+msgstr ""
+
+#: includes/options.php:222
+msgid "Member Period end"
+msgstr ""
+
+#: includes/options.php:294
+msgid "Changes saved!"
+msgstr ""
+
+#: includes/options.php:296
+msgid "ERROR!, The data has not been saved"
+msgstr ""
+
+#: includes/options.php:304
+msgid "Edit profile"
+msgstr ""
+
+#: includes/options.php:305
+msgid "User"
+msgstr ""
+
+#: includes/options.php:307 includes/options.php:308 includes/options.php:373
+#: includes/options.php:374 includes/options.php:421 includes/options.php:422
+#: includes/options.php:549 includes/options.php:550
+msgid "Email"
+msgstr ""
+
+#: includes/options.php:309
+msgid "First name"
+msgstr ""
+
+#: includes/options.php:310
+msgid "First Name"
+msgstr ""
+
+#: includes/options.php:311
+msgid "Last name"
+msgstr ""
+
+#: includes/options.php:312
+msgid "Last Name"
+msgstr ""
+
+#: includes/options.php:313
+msgid "Display name"
+msgstr ""
+
+#: includes/options.php:314
+msgid "Nickname"
+msgstr ""
+
+#: includes/options.php:315
+msgid "Description"
+msgstr ""
+
+#: includes/options.php:316
+msgid "Biographical Info"
+msgstr ""
+
+#: includes/options.php:317
+msgid "New password"
+msgstr ""
+
+#: includes/options.php:318 includes/options.php:320
+msgid "Leave empty to avoid updating"
+msgstr ""
+
+#: includes/options.php:319
+msgid "Repeat new password"
+msgstr ""
+
+#: includes/options.php:325
+msgid "Submit"
+msgstr ""
+
+#: includes/options.php:363
+msgid "Reset link sent to your mail!"
+msgstr ""
+
+#: includes/options.php:365
+msgid "ERROR!, Incorrect mail address"
+msgstr ""
+
+#: includes/options.php:368 includes/options.php:414 includes/options.php:466
+#: includes/options.php:540
+msgid "ERROR!, invalid captcha"
+msgstr ""
+
+#: includes/options.php:372 includes/options.php:438 includes/options.php:518
+#: includes/options.php:568
+msgid "Forgot your password?"
+msgstr ""
+
+#: includes/options.php:386
+msgid "Reset password"
+msgstr ""
+
+#: includes/options.php:389 includes/options.php:419 includes/options.php:434
+#: includes/options.php:567
+msgid "Register"
+msgstr ""
+
+#: includes/options.php:390 includes/options.php:438 includes/options.php:518
+#: includes/options.php:547
+msgid "Log in"
+msgstr ""
+
+#: includes/options.php:409
+msgid ""
+"Success!, You will receive an email with instructions to set up your password"
+msgstr ""
+
+#: includes/options.php:411
+msgid "ERROR!, This email is already registered"
+msgstr ""
+
+#: includes/options.php:459
+msgid "Success!, Your password has been set"
+msgstr ""
+
+#: includes/options.php:462
+msgid "ERROR!, Your password could not be set, please try again"
+msgstr ""
+
+#: includes/options.php:473 includes/options.php:516
+msgid "Set password"
+msgstr ""
+
+#: includes/options.php:474 includes/options.php:551
+msgid "Password"
+msgstr ""
+
+#: includes/options.php:476
+msgid "Confirm password"
+msgstr ""
+
+#: includes/options.php:494
+msgid "Set you password"
+msgstr ""
+
+#: includes/options.php:535
+msgid "ERROR!, check your email or password"
+msgstr ""
+
+#: includes/options.php:537
+msgid "Success!"
+msgstr ""
+
+#: includes/options.php:564
+msgid "Sign in"
+msgstr ""
+
+#: includes/options.php:695
+msgid "Member's Only"
+msgstr ""
+
+#: includes/options.php:700
+msgid ""
+"Hide partial content with <b>[lm_members_only]</b>Hidden content<b>[/"
+"lm_members_only]</b>"
+msgstr ""
+"Hide partial content with <b>[lm_members_only]</b>Hidden content<b>[/"
+"lm_members_only]</b>"
+
+#: includes/options.php:703
+msgid "Hide comments to non-members?"
+msgstr ""
+
+#: includes/options.php:716
 msgid "Hide entire content to non-members"
 msgstr "Hide entire content to non-members"
 
-#: ../includes/options.php:730, ../includes/options.php:753
+#: includes/options.php:772
+msgid "Hidden content"
+msgstr "Hidden content"
+
+#: includes/options.php:781 includes/options.php:804
 msgid "Unlock the full content by becoming a member today!"
 msgstr "Unlock the full content by becoming a member today!"
 
-#: ../includes/options.php:721
-msgid "Hidden content"
-msgstr "Hidden content"
+#: includes/options.php:872
+msgid "Profile"
+msgstr ""
+
+#: includes/options.php:875
+msgid "Login"
+msgstr ""
+
+#~ msgid "You do not have sufficient permissions to access this page."
+#~ msgstr "You do not have sufficient permissions to access this page."

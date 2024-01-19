@@ -21,7 +21,11 @@ function lm_hide_profile(){
 
         //if we're at admin profile.php page
         if (strpos ($_SERVER ['REQUEST_URI'] , 'wp-admin/profile.php' )) {
-            wp_redirect (home_url()); // to page like: example.com/my-profile/
+          if(!empty(get_option('lm_member_page'))){
+            wp_redirect (get_permalink(get_option('lm_member_page')));
+          }else{
+            wp_redirect(home_url());
+          }
             exit();
         }
     }
@@ -133,7 +137,7 @@ function lm_register_lightmember_settings() { // whitelist options
       if(is_user_logged_in()){
         $user = wp_get_current_user();
 
-        $content = '<div class="lm_profile_box"><p>'.__('Welcome to your member area.','lightmember').'</p><h2>'.__('Welcome','lightmember').', '.$user->user_login.'</h2>';
+        $content = '<div class="lm_profile_box"><p>'.__('This is your member area.','lightmember').'</p><h2>'.__('Welcome','lightmember').', '.$user->user_login.'</h2>';
         
         if (( in_array( get_option('member_role'), (array) $user->roles ) ) OR (current_user_can('administrator') OR is_admin())) {
           if(!empty(get_user_meta($user->ID, 'period_end',true))){
@@ -700,11 +704,6 @@ echo '<p><label for="lm_members_only">'.__('Member\'s Only', 'lightmember').'</l
   echo '<p>'.__('Hide partial content with <b>[lm_members_only]</b>Hidden content<b>[/lm_members_only]</b>','lightmember').'</p>';
 
 
-  echo '<p><label for="lm_comments_status">'.__('Hide comments to non-members?', 'lightmember').'</label> <select id="lm_comments_status" name="lm_comments_status">'
-  .'<option value="1" '.(get_post_meta($post->ID,'lm_comments_status',true) ? 'selected="selected"' : '').'>'.__( 'True', 'lightmember' ).'</option>'
-  .'<option value="0" '.(!get_post_meta($post->ID,'lm_comments_status',true) ? 'selected="selected"' : '').'>'.__( 'False', 'lightmember' ).'</option>'
-  .'</select></p>';
-
 
 }
 
@@ -721,8 +720,7 @@ function lm_save_metabox_data( $post_id ) {
   if (current_user_can('administrator') && is_admin()) {
     delete_post_meta($post_id, 'lm_members_only');
     update_post_meta( $post_id, 'lm_members_only', $_POST['lm_members_only'] );
-    delete_post_meta($post_id, 'lm_comments_status');
-    update_post_meta( $post_id, 'lm_comments_status', $_POST['lm_comments_status'] );
+
     
   }
 }
@@ -765,7 +763,7 @@ function lm_hide_partial_content($atts = [], $content = null, $tag = '')
     $atts = array_change_key_case((array) $atts, CASE_LOWER);
 
     $user = wp_get_current_user();
-
+    $o = "";
 
     if (( in_array( get_option('member_role'), (array) $user->roles ) ) OR (current_user_can('administrator') OR is_admin())) {
       if ((current_user_can('administrator') OR is_admin())) {
@@ -778,7 +776,11 @@ function lm_hide_partial_content($atts = [], $content = null, $tag = '')
       if(!empty($atts['message'])){
         $o .= '<div class="lm_hide_box">'.$atts['message'].'</div>';
       }else{
-        $o .= '<div class="lm_hide_box">'.get_option('lm_partial_hide_box_content',__('Unlock the full content by becoming a member today!','lightmember')).'</div>';       
+        if(!empty($atts['no_message'])){
+          $o .= "";
+        }else{
+          $o .= '<div class="lm_hide_box">'.get_option('lm_partial_hide_box_content',__('Unlock the full content by becoming a member today!','lightmember')).'</div>';       
+        }
       }
 		}
 
@@ -828,23 +830,6 @@ function lm_change_role_of_expired_member(){
 }
 
 
-function lm_disable_comments_selection(){
-  global $post;
-
-  $user = wp_get_current_user();
-
-  if(get_post_meta($post->ID,'lm_comments_status',true) == 1){
-    if (!current_user_can('administrator')) {
-        if(!in_array( get_option('member_role'), (array) $user->roles )){
-          add_filter('comments_open', '__return_false', 20, 2);
-        }
-        
-    }
-  }
-
-}
-
-add_action( 'wp_head', 'lm_disable_comments_selection' );
 
 
 

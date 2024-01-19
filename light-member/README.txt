@@ -41,6 +41,7 @@ What you can do with this plugin:
 * Shortcode for invoices, profile, edit user
 * Stripe invoices and Customer Portal access
 * Highlighted hidden content for administrators
+* Shortcodes/Filters/Hooks
 
 Supported languages:
 
@@ -74,6 +75,10 @@ Yes, completely free. You won't have to pay for any additional add-ons. If this 
 6. Administrator view of partial hidden content
 
 == Changelog ==
+
+= 1.2 =
+* Added shortcode lm_login_button
+* Bug fixes
 
 = 1.1 =
 * Replace default login_url when wp-login.php is disabled.

@@ -3,7 +3,7 @@
 Plugin Name: Light Member
 Plugin URI: https://ektorcaba.com
 Description: Ultra low resources member plugin, turn your site in a membership site. If it has helped you, please consider making a donation.
-Version: 1.1
+Version: 1.2
 Author: ektorcaba
 Author URI: https://ektorcaba.com
 Text Domain: lightmember

@@ -257,49 +257,51 @@ function lm_lightmember_edit_member_profile($atts = [], $content = null, $tag = 
   if(is_user_logged_in()){
       $user = wp_get_current_user();
 
-  if($_POST['lm_action_user']=='lm_edit_user'){
+  if(isset($_POST['lm_action_user'])){
+    if($_POST['lm_action_user']=='lm_edit_user'){
 
 
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $nickname = $_POST['nickname'];
-    $email = $_POST['email'];
-    $url = $_POST['url'];
-    $description = $_POST['description'];
-    $userdata = array(
-    'ID'            =>  $user->ID,
-    'first_name'    =>  $first_name,
-    'last_name'     =>  $last_name,
-    'nickname'      =>  $nickname,
-    'display_name'  =>  $nickname,
-    'description'   =>  $description
-    );
- 
-    
-    if(!empty($_POST['pwd1']) AND !empty($_POST['pwd2'])){
-      if($_POST['pwd1'] == $_POST['pwd2']){
-        wp_set_password($_POST['pwd1'],$user->ID);
+      $first_name = $_POST['first_name'];
+      $last_name = $_POST['last_name'];
+      $nickname = $_POST['nickname'];
+      $email = $_POST['email'];
+      $url = $_POST['url'];
+      $description = $_POST['description'];
+      $userdata = array(
+      'ID'            =>  $user->ID,
+      'first_name'    =>  $first_name,
+      'last_name'     =>  $last_name,
+      'nickname'      =>  $nickname,
+      'display_name'  =>  $nickname,
+      'description'   =>  $description
+      );
+  
+      
+      if(!empty($_POST['pwd1']) AND !empty($_POST['pwd2'])){
+        if($_POST['pwd1'] == $_POST['pwd2']){
+          wp_set_password($_POST['pwd1'],$user->ID);
+        }
+
       }
 
-    }
+      $userp = wp_update_user($userdata);
 
-    $userp = wp_update_user($userdata);
+      do_action('lm_save_custom_fields', $user->ID, $_POST);
 
-    do_action('lm_save_custom_fields', $user->ID, $_POST);
+    
 
-   
+      if($userp){
+        $flash_message = '<div class="lm_flash_message">'.__('Changes saved!','lightmember').'</div>';
+      }else{
+        $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, The data has not been saved','lightmember').'</div>';  
+      }
 
-    if($userp){
-      $flash_message = '<div class="lm_flash_message">'.__('Changes saved!','lightmember').'</div>';
-    }else{
-      $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, The data has not been saved','lightmember').'</div>';  
-    }
-
-}
-
+  }
+  }
 
 
-$content .= '<br /><div class="lm_edit_form"><h3>'.__('Edit profile','lightmember').'</h3>'.$flash_message.'<form class="lm_edit_member" method="post">'
+
+$content .= '<br /><div class="lm_edit_form"><h3>'.__('Edit profile','lightmember').'</h3>'.(empty($flash_message) ? '':$flash_message).'<form class="lm_edit_member" method="post">'
 .'<p class="lm_entry_form"><label for="u">'.__('User','lightmember').'</label>'
 .'<input type="text" name="u" value="'.$user->user_login.'" disabled></p>'
 .'<p class="lm_entry_form"><label for="e">'.__('Email','lightmember').'</label>'
@@ -345,24 +347,29 @@ document.getElementById("pwd2").onkeyup = function() {lm_checkpwd()};'
 
   if(isset($_GET['reset'])){
 
-    if($_POST['lm_action_user']=='lm_forgot_password'){
-      $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
-        
-      if($captcha_response){
-        add_filter( 'retrieve_password_message', 'lm_custom_retrieve_password_message', 10, 4);
-        add_filter('retrieve_password_title', 'lm_custom_retrieve_password_title', 10 ,3);
+    if(isset($_POST['lm_action_user'])){
+      if($_POST['lm_action_user']=='lm_forgot_password'){
 
-        if(retrieve_password($_POST['email'])){
-          $flash_message = '<div class="lm_flash_message">'.__('Reset link sent to your mail!','lightmember').'</div>';
+        if(get_option('lm_google_recaptcha')){
+          $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
         }else{
-          $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, Incorrect mail address','lightmember').'</div>';
+          $captcha_response = true;
         }
-      }else{
-        $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, invalid captcha','lightmember').'</div>';
+        if($captcha_response){
+          add_filter( 'retrieve_password_message', 'lm_custom_retrieve_password_message', 10, 4);
+          add_filter('retrieve_password_title', 'lm_custom_retrieve_password_title', 10 ,3);
+
+          if(retrieve_password($_POST['email'])){
+            $flash_message = '<div class="lm_flash_message">'.__('Reset link sent to your mail!','lightmember').'</div>';
+          }else{
+            $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, Incorrect mail address','lightmember').'</div>';
+          }
+        }else{
+          $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, invalid captcha','lightmember').'</div>';
+        }
       }
     }
-
-    $content = '<div class="lm_login_form"><h3>'.__('Forgot your password?','lightmember').'</h3>'.$flash_message.'<form class="lm_edit_member" method="post">'
+    $content = '<div class="lm_login_form"><h3>'.__('Forgot your password?','lightmember').'</h3>'.(isset($flash_message) ? $flash_message:'').'<form class="lm_edit_member" method="post">'
     .'<p class="lm_entry_form"><label for="email">'.__('Email','lightmember').'</label>'
     .'<input type="text" name="email" value="" placeholder="'.__('Email','lightmember').'" autocomplete="off" /></p>'
     .'<input type="hidden" name="lm_action_user" value="lm_forgot_password" />';
@@ -376,7 +383,7 @@ document.getElementById("pwd2").onkeyup = function() {lm_checkpwd()};'
       }
     }
 
-    $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Reset password','lightmember').'" disabled="disabled" /></p>'
+    $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Reset password','lightmember').'" '.(get_option('lm_google_recaptcha') ? 'disabled="disabled"':'').' /></p>'
     .'</form></div>';
 
     $register = '<a href="'.home_url( add_query_arg( array(), $wp->request ) ).'?register">'.__('Register','lightmember').'</a> | ';
@@ -387,23 +394,29 @@ document.getElementById("pwd2").onkeyup = function() {lm_checkpwd()};'
   }elseif(isset($_GET['register'])){
     if(get_option('lm_register_free_member')==1){
 
-      if($_POST['lm_action_user']=='lm_register_user'){
-        
-        $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
-        
-        if($captcha_response){
-          //registrar usuario
-          if(lm_register_logic($_POST)){
-            $flash_message = '<div class="lm_flash_message">'.__('Success!, You will receive an email with instructions to set up your password','lightmember').'</div>';
+      if(isset($_POST['lm_action_user'])){
+        if($_POST['lm_action_user']=='lm_register_user'){
+          
+          if(get_option('lm_google_recaptcha')){
+            $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
           }else{
-            $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, This email is already registered','lightmember').'</div>';
+            $captcha_response = true;
+          }          
+          
+          if($captcha_response){
+            //registrar usuario
+            if(lm_register_logic($_POST)){
+              $flash_message = '<div class="lm_flash_message">'.__('Success!, You will receive an email with instructions to set up your password','lightmember').'</div>';
+            }else{
+              $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, This email is already registered','lightmember').'</div>';
+            }
+          }else{
+            $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, invalid captcha','lightmember').'</div>';
           }
-        }else{
-          $flash_message = '<div class="lm_flash_message_e">'.__('ERROR!, invalid captcha','lightmember').'</div>';
         }
       }
 
-      $content = '<div class="lm_login_form"><h3>'.__('Register','lightmember').'</h3>'.$flash_message.'<form class="lm_edit_member" method="post">'
+      $content = '<div class="lm_login_form"><h3>'.__('Register','lightmember').'</h3>'.(isset($flash_message) ? $flash_message:'').'<form class="lm_edit_member" method="post">'
 
       .'<p class="lm_entry_form"><label for="email">'.__('Email','lightmember').'</label>'
       .'<input type="text" name="email" value="" placeholder="'.__('Email','lightmember').'" autocomplete="off" required /></p>'
@@ -418,7 +431,7 @@ document.getElementById("pwd2").onkeyup = function() {lm_checkpwd()};'
         }
       }
 
-      $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Register','lightmember').'" disabled="disabled" /></p>'
+      $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Register','lightmember').'" '.(get_option('lm_google_recaptcha') ? 'disabled="disabled"':'').' /></p>'
       .'</form></div>';
 
       
@@ -434,8 +447,11 @@ document.getElementById("pwd2").onkeyup = function() {lm_checkpwd()};'
 
     if($_POST['lm_action_user']=='lm_setup_password'){
         
-
-      $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
+      if(get_option('lm_google_recaptcha')){
+        $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
+      }else{
+        $captcha_response = true;
+      }
         
       if($captcha_response){
         //establecer contraseña usuario
@@ -475,7 +491,7 @@ if($ok==0){
       }
     }
 
-    $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Set you password','lightmember').'" disabled="disabled"/></p>'
+    $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Set you password','lightmember').'" '.(get_option('lm_google_recaptcha') ? 'disabled="disabled"':'').'/></p>'
     .'</form></div>';
 
 
@@ -505,10 +521,14 @@ if($ok==0){
 
 
   }else{
-
+    if(isset($_POST['lm_action_user'])){
       if($_POST['lm_action_user']=='lm_login_user'){
-        
-        $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
+
+        if(get_option('lm_google_recaptcha')){
+          $captcha_response = lm_check_recaptcha($_POST['g-recaptcha-response']);
+        }else{
+          $captcha_response = true;
+        }        
         
         if($captcha_response){
           if(!lm_login_logic($_POST)){
@@ -521,11 +541,12 @@ if($ok==0){
         }
 
       }
+    }
 
 
-    $content = '<div class="lm_login_form"><h3>'.__('Log in','lightmember').'</h3>'.$flash_message.'<form class="lm_edit_member" method="post">'
+    $content = '<div class="lm_login_form"><h3>'.__('Log in','lightmember').'</h3>'.(isset($flash_message) ? $flash_message:'').'<form class="lm_edit_member" method="post">';
 
-    .'<p class="lm_entry_form"><label for="email">'.__('Email','lightmember').'</label>'
+    $content .='<p class="lm_entry_form"><label for="email">'.__('Email','lightmember').'</label>'
     .'<input type="text" name="email" value="" placeholder="'.__('Email','lightmember').'" autocomplete="off" required /></p>'
     .'<p class="lm_entry_form"><label for="pwd">'.__('Password','lightmember').'</label>'
     .'<input type="password" id="pwd" name="pwd" autocomplete="off" required /></p>'
@@ -540,7 +561,7 @@ if($ok==0){
     
     $content.= apply_filters( 'lm_add_custom_fields_login_form', "" );
     
-    $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Sign in','lightmember').'" disabled="disabled" /></p>'
+    $content .='<p class="lm_entry_form"><input id="submit" type="submit" name="post_submit" value="'.__('Sign in','lightmember').'" '.(get_option('lm_google_recaptcha') ? 'disabled="disabled"':'').' /></p>'
     .'</form></div>';
 
     $register = '<a href="'.home_url( add_query_arg( array(), $wp->request ) ).'?register">'.__('Register','lightmember').'</a> | ';
@@ -724,11 +745,11 @@ function lm_get_random_unique_username( $prefix = '' ){
 
 function lm_member_profile_page(){
 
-  echo lm_lightmember_member_profile();
-  echo lm_lightmember_edit_member_profile();
-  echo lm_stripe_invoices();
+  $content = lm_lightmember_member_profile();
+  $content .= lm_lightmember_edit_member_profile();
+  $content .= lm_stripe_invoices();
 
-
+  return $content;
 }
 
 add_shortcode('lm_member_profile_page', 'lm_member_profile_page');
@@ -841,6 +862,23 @@ function lm_add_custom_login_url( $login_url ) {
     return $login_url;
 }
 
+
+
+
+
+
+function lm_login_button($atts = [], $content = null, $tag = ''){
+    if(is_user_logged_in()){
+      $content = '<a href="'.get_permalink(get_option('lm_member_page')).'">'.((isset($atts['icons'])) ? '<span class="dashicons dashicons-admin-users"></span>':__('Profile','lightmember')).'</a>';
+      $content .= (isset($atts['divider']) ? $atts['divider']:'&nbsp;<span class="lm_divider_login_btn">|</span>&nbsp;').'<a href="'.wp_logout_url().'">'.((isset($atts['icons'])) ? '<span class="dashicons dashicons-exit"></span>':__('Log out','lightmember')).'</a>';
+    }else{
+      $content = '<a href="'.get_permalink(get_option('lm_member_page')).'">'.__('Login','lightmember').'</a>';   
+    }
+
+    return $content;
+}
+
+add_shortcode('lm_login_button', 'lm_login_button');
 
 
 

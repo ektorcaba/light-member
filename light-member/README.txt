@@ -37,7 +37,6 @@ What you can do with this plugin:
 * Hide full content post/page/custom
 * Hide partial content shortcode on post/page/custom
 * Custom messages for hidden content to non-members
-* Hide comments to non-members by post/page/custom
 * Shortcode for invoices, profile, edit user
 * Stripe invoices and Customer Portal access
 * Highlighted hidden content for administrators
@@ -53,8 +52,26 @@ Included languages:
 
 This section describes how to install the plugin and get it working.
 
-1. Upload plugin to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+1. Upload plugin to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Create a product in Stripe with a recurring price.
+4. Create a payment link in Stripe from your product.
+5. Place your payment link where do you want in your site.
+6. Activate Stripe Customer portal.
+7. Paste Stripe Customer Portal link in plugin settings.
+8. Copy your Endpoint Webhook from plugin settings at bottom.
+9. Inside your Stripe account, go to developers/webhooks, create new endpoint, paste the link and select this events:
+    * checkout.session.completed
+    * charge.refunded
+    * customer.subscription.updated
+    * customer.subscription.deleted
+    * invoice.paid
+    * invoice.payment_succeeded
+10. Copy Secret Sign from your Endpoint Webhook and paste in the plugin settings field.
+11. Go to Stripe developers/API keys, copy & paste Secret Key to the plugin settings field.
+12. Create a new page in WordPress and place it this shortcode [lm_member_profile_page]
+13. Set this page in plugin settings at Member Page field.
+14. Set your free and member role, by default the plugin create a Member role for you, you can select Subscriber as free member and Member role as pay member.
 
 == Frequently Asked Questions ==
 
@@ -83,7 +100,6 @@ Yes, completely free. You won't have to pay for any additional add-ons. If this 
 
 = 1.1 =
 * Replace default login_url when wp-login.php is disabled.
-* Hide comments to non-members by post ID
 
 = 1.0 =
 * Initial release

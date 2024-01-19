@@ -718,10 +718,10 @@ function lm_private_content_meta_box_add()
 
 function lm_save_metabox_data( $post_id ) {
   if (current_user_can('administrator') && is_admin()) {
-    delete_post_meta($post_id, 'lm_members_only');
-    update_post_meta( $post_id, 'lm_members_only', $_POST['lm_members_only'] );
-
-    
+    if(isset($_POST['lm_members_only'])){
+      delete_post_meta($post_id, 'lm_members_only');
+      update_post_meta( $post_id, 'lm_members_only', $_POST['lm_members_only'] );
+    }
   }
 }
 

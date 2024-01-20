@@ -88,12 +88,12 @@ if (! current_user_can ('manage_options')) wp_die (__ ('No tienes suficientes pe
 			</tr>
 
 			<tr valign="top">
-			<th scope="row"><?php _e( 'Email Subject', 'lightmember' ) ?></th>
+			<th scope="row"><?php _e( 'Welcome Email Subject to set password', 'lightmember' ) ?></th>
 			<td><input type="text" class="regular-text" name="email_pwd_link_subject" value="<?php echo esc_attr( get_option('email_pwd_link_subject') ); ?>" /></td>
 			</tr>
 
 			<tr valign="top">
-			<th scope="row"><?php _e( 'Email message', 'lightmember' ) ?></th>
+			<th scope="row"><?php _e( 'Welcome Email message to set password', 'lightmember' ) ?></th>
 			<td><textarea class="regular-text" name="email_pwd_link_message"><?php echo esc_attr( get_option('email_pwd_link_message') ); ?></textarea></td>
 			</tr>
 			<tr valign="top">
@@ -172,12 +172,12 @@ if (! current_user_can ('manage_options')) wp_die (__ ('No tienes suficientes pe
 			</tr>
 
 			<tr valign="top">
-			<th scope="row"><?php _e( 'reCAPTCHA Site Key', 'lightmember' ) ?></th>
+			<th scope="row"><?php _e( 'reCAPTCHA Site Key', 'lightmember' ) ?> v.2</th>
 			<td><input type="text" class="regular-text" name="lm_r_site_key" value="<?php echo esc_attr( get_option('lm_r_site_key') ); ?>" /></td>
 			</tr>
 
 			<tr valign="top">
-			<th scope="row"><?php _e( 'reCAPTCHA Secret Key', 'lightmember' ) ?></th>
+			<th scope="row"><?php _e( 'reCAPTCHA Secret Key', 'lightmember' ) ?> v.2</th>
 			<td><input type="text" class="regular-text" name="lm_r_secret_key" value="<?php echo esc_attr( get_option('lm_r_secret_key') ); ?>" /></td>
 			</tr>
 

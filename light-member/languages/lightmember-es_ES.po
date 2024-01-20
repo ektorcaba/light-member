@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: undefined\n"
-"POT-Creation-Date: 2024-01-19 13:06+0000\n"
+"POT-Creation-Date: 2024-01-20 09:45+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -59,13 +59,13 @@ msgstr "¿Habilitar modo de producción de Stripe?"
 
 #: admin/settings.php:47 admin/settings.php:74 admin/settings.php:124
 #: admin/settings.php:134 admin/settings.php:144 admin/settings.php:155
-#: admin/settings.php:167 includes/options.php:696 includes/options.php:704
+#: admin/settings.php:167 includes/options.php:700
 msgid "True"
 msgstr "Verdadero"
 
 #: admin/settings.php:48 admin/settings.php:75 admin/settings.php:125
 #: admin/settings.php:135 admin/settings.php:145 admin/settings.php:156
-#: admin/settings.php:168 includes/options.php:697 includes/options.php:705
+#: admin/settings.php:168 includes/options.php:701
 msgid "False"
 msgstr "Falso"
 
@@ -98,12 +98,12 @@ msgid "Email From name"
 msgstr "Nombre del remitente del correo electrónico"
 
 #: admin/settings.php:91
-msgid "Email Subject"
-msgstr "Asunto del correo electrónico"
+msgid "Welcome Email Subject to set password"
+msgstr "Asunto del Email de bienvenida para establecer el password"
 
 #: admin/settings.php:96
-msgid "Email message"
-msgstr "Mensaje de correo electrónico"
+msgid "Welcome Email message to set password"
+msgstr "Mensaje del Email de bienvenida para establecer el password"
 
 #: admin/settings.php:105
 msgid "Message to display for partially hidden content to non-members"
@@ -188,7 +188,7 @@ msgstr ""
 msgid "Add endpoint"
 msgstr "Agregar punto de conexión"
 
-#: includes/options.php:100
+#: includes/options.php:104
 msgid ""
 "Thank you for your subscription to {{sitename}}!.\\n You can now enjoy all "
 "its benefits by accessing your account.\\n\\n {{siteurl}}"
@@ -196,228 +196,228 @@ msgstr ""
 "Gracias por tu suscripción a {{sitename}}. Ahora puedes disfrutar de todos "
 "sus beneficios accediendo a tu cuenta.\\n\\n {{siteurl}}"
 
-#: includes/options.php:101
+#: includes/options.php:105
 msgid "Your subscription has been updated!"
 msgstr "¡Tu suscripción ha sido actualizada!"
 
-#: includes/options.php:119
+#: includes/options.php:123
 msgid "Donate"
 msgstr "Donar"
 
-#: includes/options.php:136
-msgid "Welcome to your member area."
-msgstr "Bienvenid@ a tu zona de miembro."
+#: includes/options.php:140
+msgid "This is your member area."
+msgstr "Esta es tu zona de miembro."
 
-#: includes/options.php:136
+#: includes/options.php:140
 msgid "Welcome"
 msgstr "Bienvenid@"
 
-#: includes/options.php:140
+#: includes/options.php:144
 msgid "You are part of the members' community. Your membership is valid until"
 msgstr "Formas parte de la comunidad de miembros. Tu membresía is válida hasta"
 
-#: includes/options.php:140
+#: includes/options.php:144
 msgid "Y-m-d"
 msgstr ""
 
-#: includes/options.php:142
+#: includes/options.php:146
 msgid "You are part of the members' community."
 msgstr "Formas parte de la comunidad de miembros."
 
-#: includes/options.php:146
+#: includes/options.php:150
 msgid "You are currently not a member of the site"
 msgstr "Actualmente no eres miembro de este sitio"
 
-#: includes/options.php:152
+#: includes/options.php:156
 msgid "Subscriptions"
 msgstr "Suscripciones"
 
-#: includes/options.php:157 includes/options.php:873
+#: includes/options.php:161 includes/options.php:858
 msgid "Log out"
 msgstr "Salir"
 
-#: includes/options.php:181
+#: includes/options.php:185
 msgid "Invoices"
 msgstr "Facturas"
 
-#: includes/options.php:182
+#: includes/options.php:186
 msgid "No."
 msgstr ""
 
-#: includes/options.php:182
+#: includes/options.php:186
 msgid "Date"
 msgstr "Fecha"
 
-#: includes/options.php:187
+#: includes/options.php:191
 msgid "View invoice"
 msgstr "Ver factura"
 
-#: includes/options.php:211
+#: includes/options.php:215
 msgid "Member data"
 msgstr "Información de Miembro"
 
-#: includes/options.php:216
+#: includes/options.php:220
 msgid "Stripe Customer ID"
 msgstr "ID de cliente en Stripe"
 
-#: includes/options.php:222
+#: includes/options.php:226
 msgid "Member Period end"
 msgstr "El periodo de miembro finaliza"
 
-#: includes/options.php:294
+#: includes/options.php:298
 msgid "Changes saved!"
 msgstr "¡Cambios guardados!"
 
-#: includes/options.php:296
+#: includes/options.php:300
 msgid "ERROR!, The data has not been saved"
 msgstr "ERROR!, La información no se ha guardado"
 
-#: includes/options.php:304
+#: includes/options.php:308
 msgid "Edit profile"
 msgstr "Editar perfil"
 
-#: includes/options.php:305
+#: includes/options.php:309
 msgid "User"
 msgstr "Usuario"
 
-#: includes/options.php:307 includes/options.php:308 includes/options.php:373
-#: includes/options.php:374 includes/options.php:421 includes/options.php:422
-#: includes/options.php:549 includes/options.php:550
+#: includes/options.php:311 includes/options.php:312 includes/options.php:377
+#: includes/options.php:378 includes/options.php:425 includes/options.php:426
+#: includes/options.php:553 includes/options.php:554
 msgid "Email"
 msgstr "Correo electrónico"
 
-#: includes/options.php:309
+#: includes/options.php:313
 msgid "First name"
 msgstr "Nombre"
 
-#: includes/options.php:310
+#: includes/options.php:314
 msgid "First Name"
 msgstr "Nombre"
 
-#: includes/options.php:311
+#: includes/options.php:315
 msgid "Last name"
 msgstr "Apellidos"
 
-#: includes/options.php:312
+#: includes/options.php:316
 msgid "Last Name"
 msgstr "Apellidos"
 
-#: includes/options.php:313
+#: includes/options.php:317
 msgid "Display name"
 msgstr "Nombre a mostrar"
 
-#: includes/options.php:314
+#: includes/options.php:318
 msgid "Nickname"
 msgstr "Alias de usuario"
 
-#: includes/options.php:315
+#: includes/options.php:319
 msgid "Description"
 msgstr "Descripción"
 
-#: includes/options.php:316
+#: includes/options.php:320
 msgid "Biographical Info"
 msgstr "Información biográfica"
 
-#: includes/options.php:317
+#: includes/options.php:321
 msgid "New password"
 msgstr "Nueva contraseña"
 
-#: includes/options.php:318 includes/options.php:320
+#: includes/options.php:322 includes/options.php:324
 msgid "Leave empty to avoid updating"
 msgstr "Dejar vacío para evitar la actualización"
 
-#: includes/options.php:319
+#: includes/options.php:323
 msgid "Repeat new password"
 msgstr "Repetir contraseña"
 
-#: includes/options.php:325
+#: includes/options.php:329
 msgid "Submit"
 msgstr "Enviar"
 
-#: includes/options.php:363
+#: includes/options.php:367
 msgid "Reset link sent to your mail!"
 msgstr "¡Enlace de restablecimiento enviado a tu correo electrónico!"
 
-#: includes/options.php:365
+#: includes/options.php:369
 msgid "ERROR!, Incorrect mail address"
 msgstr "ERROR!, Correo electrónico incorrecto"
 
-#: includes/options.php:368 includes/options.php:414 includes/options.php:466
-#: includes/options.php:540
+#: includes/options.php:372 includes/options.php:418 includes/options.php:470
+#: includes/options.php:544
 msgid "ERROR!, invalid captcha"
 msgstr "ERROR!, captcha incorrecto"
 
-#: includes/options.php:372 includes/options.php:438 includes/options.php:518
-#: includes/options.php:568
+#: includes/options.php:376 includes/options.php:442 includes/options.php:522
+#: includes/options.php:572
 msgid "Forgot your password?"
 msgstr "¿Olvidaste tu contraseña?"
 
-#: includes/options.php:386
+#: includes/options.php:390
 msgid "Reset password"
 msgstr "Restablecer contraseña"
 
-#: includes/options.php:389 includes/options.php:419 includes/options.php:434
-#: includes/options.php:567
+#: includes/options.php:393 includes/options.php:423 includes/options.php:438
+#: includes/options.php:571
 msgid "Register"
 msgstr "Registrarse"
 
-#: includes/options.php:390 includes/options.php:438 includes/options.php:518
-#: includes/options.php:547
+#: includes/options.php:394 includes/options.php:442 includes/options.php:522
+#: includes/options.php:551
 msgid "Log in"
 msgstr "Acceder"
 
-#: includes/options.php:409
+#: includes/options.php:413
 msgid ""
 "Success!, You will receive an email with instructions to set up your password"
 msgstr ""
 "¡Éxito! Recibirás un correo electrónico con instrucciones para configurar tu "
 "contraseña"
 
-#: includes/options.php:411
+#: includes/options.php:415
 msgid "ERROR!, This email is already registered"
 msgstr "ERROR!, Este correo electrónico ya existe"
 
-#: includes/options.php:459
+#: includes/options.php:463
 msgid "Success!, Your password has been set"
 msgstr "¡Exito!, Tu contraseña se ha configurado"
 
-#: includes/options.php:462
+#: includes/options.php:466
 msgid "ERROR!, Your password could not be set, please try again"
 msgstr "ERROR!, No se ha podido establecer la contraseña, prueba de nuevo"
 
-#: includes/options.php:473 includes/options.php:516
+#: includes/options.php:477 includes/options.php:520
 msgid "Set password"
 msgstr "Establecer contraseña"
 
-#: includes/options.php:474 includes/options.php:551
+#: includes/options.php:478 includes/options.php:555
 msgid "Password"
 msgstr "Contraseña"
 
-#: includes/options.php:476
+#: includes/options.php:480
 msgid "Confirm password"
 msgstr "Confirmar contraseña"
 
-#: includes/options.php:494
+#: includes/options.php:498
 msgid "Set you password"
 msgstr "Establece tu contraseña"
 
-#: includes/options.php:535
+#: includes/options.php:539
 msgid "ERROR!, check your email or password"
 msgstr "ERROR!, comprueba tu email o contraseña"
 
-#: includes/options.php:537
+#: includes/options.php:541
 msgid "Success!"
 msgstr "¡Exito!"
 
-#: includes/options.php:564
+#: includes/options.php:568
 msgid "Sign in"
 msgstr "Acceder"
 
-#: includes/options.php:695
+#: includes/options.php:699
 msgid "Member's Only"
 msgstr "Sólo Miembros"
 
-#: includes/options.php:700
+#: includes/options.php:704
 msgid ""
 "Hide partial content with <b>[lm_members_only]</b>Hidden content<b>[/"
 "lm_members_only]</b>"
@@ -425,29 +425,34 @@ msgstr ""
 "Ocultar contenido parcial con <b>[lm_members_only]</b>Contenido oculto<b>[/"
 "lm_members_only]</b>"
 
-#: includes/options.php:703
-msgid "Hide comments to non-members?"
-msgstr "¿Ocultar comentarios a los no miembros?"
-
-#: includes/options.php:716
+#: includes/options.php:715
 msgid "Hide entire content to non-members"
 msgstr "Ocultar todo el contenido a no miembros"
 
-#: includes/options.php:772
+#: includes/options.php:770
 msgid "Hidden content"
 msgstr "Contenido oculto"
 
-#: includes/options.php:781 includes/options.php:804
+#: includes/options.php:782 includes/options.php:806
 msgid "Unlock the full content by becoming a member today!"
 msgstr "¡Desbloquea el contenido completo al hacerte miembro hoy mismo!"
 
-#: includes/options.php:872
+#: includes/options.php:857
 msgid "Profile"
 msgstr "Perfil"
 
-#: includes/options.php:875
+#: includes/options.php:860
 msgid "Login"
 msgstr "Acceder"
+
+#~ msgid "Email Subject"
+#~ msgstr "Asunto del correo electrónico"
+
+#~ msgid "Email message"
+#~ msgstr "Mensaje de correo electrónico"
+
+#~ msgid "Hide comments to non-members?"
+#~ msgstr "¿Ocultar comentarios a los no miembros?"
 
 #~ msgid "You do not have sufficient permissions to access this page."
 #~ msgstr "No tienes permisos suficientes para acceder a esta página."

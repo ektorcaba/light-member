@@ -90,6 +90,10 @@ Yes, completely free. You won't have to pay for any additional add-ons. If this 
 
 == Changelog ==
 
+= 1.4 =
+* Documentation updated
+* Bug fixes
+
 = 1.3 =
 * Spanish language added
 * Bug fixes

@@ -268,8 +268,6 @@ function lm_lightmember_edit_member_profile($atts = [], $content = null, $tag = 
       $first_name = $_POST['first_name'];
       $last_name = $_POST['last_name'];
       $nickname = $_POST['nickname'];
-      $email = $_POST['email'];
-      $url = $_POST['url'];
       $description = $_POST['description'];
       $userdata = array(
       'ID'            =>  $user->ID,
